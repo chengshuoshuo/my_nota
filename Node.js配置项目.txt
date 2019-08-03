@@ -1,0 +1,65 @@
+Node.js 的包管理器 npm，是全球最大的开源库生态系统。
+
+npm：Node.js package manager：Node.js包管理器。Node.js是一种能够使js直接运行在计算机上的技术，它提供了很多系统底层API（例如文件操作，网络功能），但是这些API过于底层，使用起来很麻烦。所以某个功能相关的API都被第三方程序员封装成了模块包，这些模块包都被上传到了npm上，当我们需要使用某个模块包时，直接使用Node.js的npm下载即可。
+
+npm的安装与使用
+1.npm的安装
+    现在的NodeJS已经集成了npm，随同NodeJS一起安装的包管理工具，可以通过输入 "npm -v" 来测试是否成功安装。
+    npm -v      #查看npm版本号，比如：3.8.9
+
+2.npm的使用
+    npm init   #初始化一个js项目，同时创建一个package.json文件 package.json存储我们项目一些配置信息
+        所谓初始化项目，就是在文件夹中生成一个配置文件，将来可以通过这个配置文件快速配置项目
+        初始化的时候一路回车，但是需要填写一些配置信息，可以根据项目的内容和个人信息去填写；
+        注意：该package.json配置文件，是服务站点的配置文件，里边有一个属性信息：main：“xxx.js”,它是站点的入口。需要我们提供一个同名的xxx.js文件，文件内部是js编写的站点服务代码。
+
+    npm install 模块名   #安装一个模块
+    npm uninstall 模块名 #删除一个模块
+        在进行模块的安装和删除的时候可以在后面加上参数
+         -g    #表示把模块安装在全局环境中，安装完成后一般可以直接在终端中输入命令使用
+         --save #表示把模块安装在本项目中，并把安装的模块包记录到package.json配置文件的依赖项中，只能在本项目中使用
+    
+    npm ls 查看所安装的模块
+
+
+Express 的使用与安装 
+    Express中文网：http://www.expressjs.com.cn/
+    Express是基于Node.js的web应用开发框架
+    
+    npm install express --save  #安装Node.js的express模块，并保存在当前目录下。（默认会生成一个node_moudles文件夹来保存）
+
+
+项目配置步骤：
+    1. 在终端使用cd 进入项目文件夹目录
+    2. 使用npm init 初始化项目，我们定义应用的入口文件为 app.js
+    3. 下载项目所需要的模块，我们使用express模块， npm install express --save
+    4. 创建应用入口文件 app.js，然后编写代码，在app.js中我们需要
+        导入项目所需要的模块包
+        创建服务器对象
+        配置服务器静态文件夹
+        编写服务器的各个接口
+        打开服务器(.listen)，假定端口为3000
+    5.使用 node 运行服务器文件app.js， node app
+    6.在浏览器输入：IP地址 + 端口号/文件目录的方式访问
+        比如：127.0.0.1:3000 默认打开index.html文件
+             127.0.0.1:3000/img/1.jpg 打开图片
+
+    ps:如果想关闭服务使用： ctrl + c 可以关闭该服务
+
+
+
+配置项目常用命令总结：
+npm init 		
+		在当前文件夹初始化一个package.json项目配置文件
+		按照提示输入信息
+		保存后按Ctrl + C
+
+npm install packageName --save
+		在当前文件夹中安装模块包（安装在node_modules中）及其依赖包
+		--save将本次安装的模块包记录到package.json配置文件的依赖项中
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+npm uninstall packageName --save
+		卸载模块包
+		--save从package.json中删除模块包本依赖项

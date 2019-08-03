@@ -1,0 +1,21 @@
+﻿url : uniform resource locator 统一资源定位符：在WWW上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫URL
+URL一般格式：协议名+域名或IP+端口号+路径+参数
+https://www.baidu.com:80/user/login?username=jxz&password=123
+
+
+url地址也分为相对地址和绝对地址。
+
+1.绝对url：以协议名开头:  http://www.baidu.com
+
+2.相对url，不以协议名开头的url都是相对url，可以是域名或IP开头，路径开头
+
+如果以域名开头，则相对于当前页面的协议：www.baidu.com/user/login
+如果以路径开头，则相对于当前页面的协议、域名以及端口号: user/login
+
+以路径开头的url分为两种：
+     1、/开头的url，相对于当前页面url的根路径: /user/login
+     2、非/开头的url，相对于当前页面url的路径: user/login
+
+    例如当前页面地址： http:127.0.0.1:3000/user/img
+    使用/user.png实际访问地址是：http:127.0.0.1:3000/user.png
+    使用user.png实际访问地址是：http:127.0.0.1:3000/user/img/user.png

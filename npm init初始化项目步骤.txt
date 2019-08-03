@@ -1,0 +1,50 @@
+着重看##后面注释内容
+
+Microsoft Windows [版本 10.0.10586]
+(c) 2015 Microsoft Corporation。保留所有权利。
+
+【第一步：cd到项目文件夹】
+C:\Users\Jinxizhen>cd C:\Users\Jinxizhen\Desktop\nodeapp    ##进入项目目录
+
+【第二步：通过 npm init 初始化项目】
+C:\Users\Jinxizhen\Desktop\nodeapp>npm init                 ##开始初始化  
+                 
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (nodeapp) nodeapp           ##名字，可以使用默认的nodeapp，不能有大写字母，多个单词之间可以使用-连接
+version: (1.0.0)                          ##版本号，可以使用默认的1.0.0
+description: nodejs                       ##项目的描述信息
+entry point: (index.js) app.js            ##入口文件，我们定为app.js
+test command:                             ##测试命令可以不写
+git repository:                           ##git仓库，不写
+keywords: node                            ##关键字可以先不写
+author: 金西振                             ##作者
+license: (ISC)                            ##证书相关
+About to write to C:\Users\Jinxizhen\Desktop\nodeapp\package.json:
+
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "金西振",
+  "license": "ISC"
+}
+
+Is this ok? (yes) yes     ##输入yes，然后回车，初始化项目完成
+
+项目初始化完成后，会在文件夹中生成一个 package.json 文件，就是本项目的项目配置文件，其中记录了本项目的所有信息。
